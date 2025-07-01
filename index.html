@@ -107,20 +107,20 @@
     scene.add(ambientLight);
 
     const loader = new THREE.GLTFLoader();
-    loader.load('https://modelviewer.dev/shared-assets/models/Astronaut.glb', function (gltf) {
+    loader.load('https://huggingface.co/datasets/huggingface/3d-assets/resolve/main/brain/scene.glb', function (gltf) {
       const model = gltf.scene;
-      model.scale.set(10, 10, 10);
+      model.scale.set(12, 12, 12);
       model.rotation.y = Math.PI;
       scene.add(model);
 
       function animate() {
         requestAnimationFrame(animate);
-        model.rotation.y += 0.005;
+        model.rotation.y += 0.003;
         renderer.render(scene, camera);
       }
       animate();
     }, undefined, function (error) {
-      console.error('Error loading model:', error);
+      console.error('Error loading brain model:', error);
     });
 
     camera.position.z = 30;
