@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(210, 20%, 98%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(210, 5%, 65%);
+  --popover: hsl(0, 0%, 4%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --border: hsl(0, 0%, 18%);
+  --input: hsl(0, 0%, 18%);
+  --primary: hsl(213, 94%, 68%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(0, 0%, 18%);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --accent: hsl(0, 0%, 18%);
+  --accent-foreground: hsl(210, 20%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(213, 94%, 68%);
+  --radius: 0.5rem;
+  
+  /* Custom colors */
+  --deep-black: hsl(0, 0%, 4%);
+  --charcoal: hsl(0, 0%, 10%);
+  --dark-grey: hsl(0, 0%, 18%);
+  --medium-grey: hsl(0, 0%, 25%);
+  --electric-blue: hsl(213, 94%, 68%);
+  --light-blue: hsl(213, 94%, 78%);
+  --deep-blue: hsl(225, 84%, 35%);
+  --off-white: hsl(210, 20%, 98%);
+  --light-grey: hsl(210, 12%, 82%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(210, 20%, 98%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(210, 5%, 65%);
+  --popover: hsl(0, 0%, 4%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --border: hsl(0, 0%, 18%);
+  --input: hsl(0, 0%, 18%);
+  --primary: hsl(213, 94%, 68%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(0, 0%, 18%);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --accent: hsl(0, 0%, 18%);
+  --accent-foreground: hsl(210, 20%, 98%);
+  --destructive: hsl(0, 62%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(213, 94%, 68%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-space {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(213, 94%, 78%) 0%, hsl(213, 94%, 68%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-card {
+    background: hsla(0, 0%, 10%, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(0, 0%, 25%, 0.3);
+  }
+  
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, hsl(213, 94%, 68%), hsl(213, 94%, 78%));
+    transform-origin: left;
+    z-index: 1000;
+  }
+  
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(213, 94%, 68%), transparent);
+    margin: 4rem 0;
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background: hsla(0, 0%, 25%, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, hsl(213, 94%, 68%), hsl(213, 94%, 78%));
+    border-radius: 4px;
+    transition: width 1s ease-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px hsla(213, 94%, 68%, 0.15);
+  }
+  
+  .nav-link {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(213, 94%, 68%), hsl(213, 94%, 78%));
+    transition: left 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    left: 0;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid hsl(0, 0%, 18%);
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: hsl(213, 94%, 68%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px hsl(0, 0%, 4%);
+  }
+  
+  .contact-form input, .contact-form textarea {
+    background: hsla(0, 0%, 10%, 0.8);
+    border: 1px solid hsla(0, 0%, 25%, 0.5);
+    color: hsl(210, 20%, 98%);
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    border-color: hsl(213, 94%, 68%);
+    box-shadow: 0 0 0 3px hsla(213, 94%, 68%, 0.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-blue {
+  0%, 100% { box-shadow: 0 0 0 0 hsla(213, 94%, 68%, 0.7); }
+  70% { box-shadow: 0 0 0 10px hsla(213, 94%, 68%, 0); }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-blue {
+  animation: pulse-blue 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}

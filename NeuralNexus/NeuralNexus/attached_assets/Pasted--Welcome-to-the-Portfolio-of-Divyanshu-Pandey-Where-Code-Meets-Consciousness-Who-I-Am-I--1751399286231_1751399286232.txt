@@ -1,0 +1,118 @@
+🧠 Welcome to the Portfolio of Divyanshu Pandey
+"Where Code Meets Consciousness."
+
+👨‍💻 Who I Am
+I’m Divyanshu Pandey, a computer science graduate, self-motivated researcher, and explorer at the intersection of AI, cognitive science, and philosophy. My journey has taken me beyond standard software development into realms of machine learning, neurotech, and conscious systems, where I investigate not just how machines learn—but why they should.
+
+With a background in B.Tech in Computer Science (ITM University, 2019) and hands-on research at IIIT Hyderabad, I combine structured engineering with intellectual curiosity.
+
+🔍 What I Focus On
+Applied AI & Machine Learning
+Leveraging Python libraries like Scikit-learn, TensorFlow, and PyTorch to build beginner-to-intermediate level ML models. I explore real-world data and focus on interpretable learning systems.
+
+Cognitive Computing
+From neuro-inspired systems to brain-AI interfaces, I work on applications that aim to bring insight into mental processes—like memory, attention, and perception.
+
+Philosophy of Mind & Intelligence
+I investigate deeper questions around perception, rationality, and the possibility of artificial consciousness, integrating philosophical rigor into technical innovation.
+
+🧪 Research Experience
+🔬 Cognitive Science Lab, IIIT Hyderabad
+6-month internship + 4-month Research Assistantship
+
+Built a Neurological Music Therapy Platform for Alzheimer’s patients using DepthAI and real-time vision interfaces.
+
+Audited intensive courses:
+
+Introduction to Cognitive Science
+
+Cognitive Neuroscience
+
+Behavioral Research & Statistical Methods
+
+Machine Learning
+
+📚 Philosophy Lab, IIIT Hyderabad
+Research Assistant (Mar 2024 – May 2024)
+
+Worked on problems relating to perception, consciousness, and analytic metaphysics, especially in relation to cognitive systems and logic.
+
+💻 Web Development Experience
+🌐 Product Lab – Web Development Intern
+Duration: July 2023 – Jan 2024
+
+Stack: ReactJS + Flask
+
+Built modern web applications integrating user-focused design with scalable backend logic.
+
+Managed full-stack components and collaborated in agile environments.
+
+🧰 Technical Skills
+Category	Tools & Frameworks
+Languages	Python, JavaScript, HTML, CSS
+ML & Data Science	TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib
+Web Development	ReactJS, Flask, Bootstrap
+Tools & Systems	Docker, Git, VS Code, Replit
+Version Control & Deployment	GitHub, Netlify, Heroku
+
+🧠 Learning Style
+I thrive in environments where theoretical depth meets experimental tinkering. I’m someone who:
+
+Learns by first grasping the “why” of a concept
+
+Moves from whiteboards to Jupyter notebooks in a hands-on loop
+
+Breaks down complexity into manageable, elegant logic
+
+Is driven more by intellectual wonder than technical trend-chasing
+
+🧩 Projects Snapshot
+🎧 Neuro-Music Therapy System:
+An AI-assisted platform for neurological music therapy using DepthAI, built for cognitive rehabilitation in Alzheimer’s patients.
+
+🧠 Perception Model Prototypes:
+Experimental ML models to simulate subjective perception variability in data labeling tasks—philosophical grounding meets practical inference.
+
+📊 Data Visualization Dashboards:
+Created rich visual interfaces using Matplotlib and Seaborn to extract insight from environmental and health-related datasets.
+
+🧪 Beginner Machine Learning Projects:
+Ongoing series of implementations in classification, clustering, and regression problems using Python's ML ecosystem.
+
+🎓 Academic Background
+B.Tech – Computer Science
+ITM University, Gwalior (2019)
+
+Intermediate (Class 12)
+Army Public School, Gorakhpur (2014)
+
+High School (Class 10)
+Army Public School, Gorakhpur (2012)
+
+🧠 Personal Strengths
+Intellectual Curiosity: I constantly ask, “What if?” and “Why?”—which drives me to explore connections between disciplines.
+
+Philosophical Depth: I don’t just learn how things work, but explore what it means for them to work.
+
+Interdisciplinary Thinking: I operate across boundaries—between engineering, neuroscience, and philosophy.
+
+Resilience Toward Coding Challenges: I once feared Python syntax. Now I embrace it as a language of creation.
+
+Analytical & Reflective: Whether in code, conversations, or chess, I favor structure, logic, and deep reflection.
+
+🏆 Other Notable Mentions
+🧠 Organized ‘Rubaroo’, an interdepartmental event to foster interdisciplinary student conversations
+
+🏸 Represented college in badminton and football
+
+♟ Strategic chess enthusiast with a focus on pattern, precision, and patience
+
+📬 Contact Me
+Email: divyanshukrpandey17@gmail.com
+
+Phone: +91-8827455502
+
+LinkedIn: linkedin.com/in/divyanshu-pandey-743180110
+
+“I’m not just building AI. I’m building understanding.”
+If you're someone who shares this drive for meaning, logic, and mindful innovation—let’s connect.
