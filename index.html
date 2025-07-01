@@ -107,7 +107,7 @@
     scene.add(ambientLight);
 
     const loader = new THREE.GLTFLoader();
-    loader.load('https://huggingface.co/datasets/huggingface/3d-assets/resolve/main/brain/scene.glb', function (gltf) {
+    loader.load('https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/BrainStem/glTF-Binary/BrainStem.glb' {
       const model = gltf.scene;
       model.scale.set(12, 12, 12);
       model.rotation.y = Math.PI;
