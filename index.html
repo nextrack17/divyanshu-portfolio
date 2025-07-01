@@ -107,18 +107,20 @@
     scene.add(ambientLight);
 
     const loader = new THREE.GLTFLoader();
-    loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF/BrainStem.gltf', function (gltf) {
-      const brain = gltf.scene;
-      brain.scale.set(10, 10, 10);
-      brain.rotation.y = Math.PI;
-      scene.add(brain);
+    loader.load('https://modelviewer.dev/shared-assets/models/Astronaut.glb', function (gltf) {
+      const model = gltf.scene;
+      model.scale.set(10, 10, 10);
+      model.rotation.y = Math.PI;
+      scene.add(model);
 
       function animate() {
         requestAnimationFrame(animate);
-        brain.rotation.y += 0.005;
+        model.rotation.y += 0.005;
         renderer.render(scene, camera);
       }
       animate();
+    }, undefined, function (error) {
+      console.error('Error loading model:', error);
     });
 
     camera.position.z = 30;
