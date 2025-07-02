@@ -1,21 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script
-      type="text/javascript"
-      src="https://replit.com/public/js/replit-dev-banner.js"
-    ></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divyanshu Pandey | Portfolio</title>
+  <link rel="icon" href="data:," /> <!-- avoids 404 favicon.ico -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #00bfff;
+    }
+
+    p.description {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 1rem auto 3rem;
+      color: #cfcfcf;
+    }
+
+    #brain-canvas {
+      width: 100%;
+      height: 500px;
+      display: block;
+    }
+
+    section {
+      padding: 2rem;
+      background-color: #2a2a2a;
+      margin: 2rem 0;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+    }
+
+    h2 {
+      color: #00bfff;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Divyanshu Pandey</h1>
+    <p class="description">
+      Computer Science Grad | AI & Cognitive Science Researcher | Exploring Conscious Machines
+    </p>
+    <canvas id="brain-canvas"></canvas>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I’m a B.Tech CSE graduate and research assistant with work in cognitive science and
+      philosophy at IIIT Hyderabad. I explore the intersections of machine learning, brain science,
+      and rational thought, with experience in web development, neural interfaces, and philosophical inquiry.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>Neurological Music Therapy Platform using DepthAI</li>
+      <li>Perception Modeling using Python & ML</li>
+      <li>React + Flask Web Development Projects</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: divyanshukrpandey17@gmail.com</p>
+    <p>Phone: +91-8827455502</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/divyanshu-pandey-743180110" target="_blank">Click Here</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Divyanshu Pandey</p>
+  </footer>
+
+  <!-- Three.js Brain Animation -->
+  <script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.min.js';
+    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/loaders/GLTFLoader.min.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / 500,
+      0.1,
+      1000
+    );
+
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('brain-canvas'), alpha: true });
+    renderer.setSize(window.innerWidth, 500);
+
+    const light = new THREE.PointLight(0x00bfff, 2);
+    light.position.set(10, 10, 10);
+    scene.add(light);
+
+    const ambientLight = new THREE.AmbientLight(0x404040);
+    scene.add(ambientLight);
+
+    const loader = new GLTFLoader();
+    loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF/BrainStem.gltf', function (gltf) {
+      const brain = gltf.scene;
+      brain.scale.set(10, 10, 10);
+      brain.rotation.y = Math.PI;
+      scene.add(brain);
+
+      function animate() {
+        requestAnimationFrame(animate);
+        brain.rotation.y += 0.005;
+        renderer.render(scene, camera);
+      }
+      animate();
+    });
+
+    camera.position.z = 30;
+  </script>
+</body>
 </html>
+
     
    
