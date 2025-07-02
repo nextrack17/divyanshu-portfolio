@@ -123,7 +123,7 @@
     scene.add(ambientLight);
 
     const loader = new GLTFLoader();
-    loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF/BrainStem.gltf', function (gltf) {
+    loader.load('models-brain/BrainStem/glTF/BrainStem.gltf', function (gltf) {
       const brain = gltf.scene;
       brain.scale.set(10, 10, 10);
       brain.rotation.y = Math.PI;
