@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divyanshu Pandey | Portfolio</title>
-  <link rel="icon" href="data:," /> <!-- avoids 404 favicon.ico -->
   <style>
     body {
       margin: 0;
@@ -35,14 +34,16 @@
       width: 100%;
       height: 500px;
       display: block;
+      background: transparent;
     }
 
     section {
       padding: 2rem;
       background-color: #2a2a2a;
-      margin: 2rem 0;
+      margin: 2rem auto;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+      max-width: 1000px;
     }
 
     h2 {
@@ -73,9 +74,7 @@
   <section>
     <h2>About Me</h2>
     <p>
-      I’m a B.Tech CSE graduate and research assistant with work in cognitive science and
-      philosophy at IIIT Hyderabad. I explore the intersections of machine learning, brain science,
-      and rational thought, with experience in web development, neural interfaces, and philosophical inquiry.
+      I’m a B.Tech CSE graduate and research assistant at IIIT Hyderabad, working in cognitive science and philosophy. I explore the intersections of machine learning, brain science, and consciousness studies, and have hands-on experience in building web-based neural tools.
     </p>
   </section>
 
@@ -99,21 +98,21 @@
     <p>&copy; 2025 Divyanshu Pandey</p>
   </footer>
 
-  <!-- Three.js Brain Animation -->
+  <!-- 3D Brain using Three.js and GLTFLoader -->
   <script type="module">
     import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.min.js';
     import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/loaders/GLTFLoader.min.js';
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / 500,
-      0.1,
-      1000
-    );
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 500, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById('brain-canvas'),
+      alpha: true,
+      antialias: true
+    });
 
-    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('brain-canvas'), alpha: true });
     renderer.setSize(window.innerWidth, 500);
+    camera.position.z = 30;
 
     const light = new THREE.PointLight(0x00bfff, 2);
     light.position.set(10, 10, 10);
@@ -123,24 +122,26 @@
     scene.add(ambientLight);
 
     const loader = new GLTFLoader();
-    loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF/BrainStem.gltf', function (gltf) {
-      const brain = gltf.scene;
-      brain.scale.set(10, 10, 10);
-      brain.rotation.y = Math.PI;
-      scene.add(brain);
+    loader.load(
+      'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF/BrainStem.gltf',
+      (gltf) => {
+        const brain = gltf.scene;
+        brain.scale.set(10, 10, 10);
+        brain.rotation.y = Math.PI;
+        scene.add(brain);
 
-      function animate() {
-        requestAnimationFrame(animate);
-        brain.rotation.y += 0.005;
-        renderer.render(scene, camera);
+        function animate() {
+          requestAnimationFrame(animate);
+          brain.rotation.y += 0.005;
+          renderer.render(scene, camera);
+        }
+        animate();
+      },
+      undefined,
+      (error) => {
+        console.error('Error loading 3D model:', error);
       }
-      animate();
-    });
-
-    camera.position.z = 30;
+    );
   </script>
 </body>
 </html>
-
-    
-   
